@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{%static 'main.css'%}">
+  <link rel="stylesheet" href="{%static 'css/main.css'%}">
   {% if title %}
   <title>Instaclone-{{title}}</title>
   {% else %}
@@ -73,7 +73,7 @@
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      image
     </div>
     <div class="col-6">
       {% block content %}
@@ -89,6 +89,6 @@
 
   
   {% bootstrap_javascript %}
-  <link rel="stylesheet" href="{%static 'inst.js'%}">
+  <link rel="stylesheet" href="{%static 'js/inst.js'%}">
 </body>
 </html>
