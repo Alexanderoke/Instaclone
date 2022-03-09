@@ -30,4 +30,4 @@ def register(request):
   return render(request,'insta/register.html')
 
 def login(request):
-  return render(request,'insta/login')
+  return render(request,'insta/login.html')
