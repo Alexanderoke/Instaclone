@@ -2,12 +2,12 @@
 
 {% block content %}
 <h1>Home</h1>
-{% for image in images %}
-  {{ image.Image }}
-  
-  
-  {{ image.Image2 }} 
-  <br>
-  {{ image.comment }}
+{% for post in posts %}
+
+  {{ post.author }}
+  {{ post.image }}
+    
+  {{ post.caption }} 
+    
 {% endfor %}
 {% endblock content %}

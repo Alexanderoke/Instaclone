@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Post
 from django.http import HttpResponse
 
 # Create your views here.
@@ -21,7 +22,7 @@ images=[
 
 def home(request):
   context={
-    'images':images
+    'posts': Post.objects.all()
   }
   return render(request,'insta/home.html',context)
 

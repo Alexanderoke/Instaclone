@@ -5,6 +5,10 @@ from django.contrib.auth.models import User
 
 
 class Post(models.Model):
-  image = models.ImageField()
+  image = models.ImageField(null = True, blank=True)
   caption =models.TextField()
   author =models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+  def __str__(self):
+    return self.image
