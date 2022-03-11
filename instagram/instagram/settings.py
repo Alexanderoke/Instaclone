@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary_storage
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +44,8 @@ INSTALLED_APPS = [
     'users',
     'crispy_forms',
     'bootstrap5',
+    'cloudinary',
+    'cloudinary_storage',
 
 ]
 
@@ -126,6 +130,14 @@ STATIC_URL = 'static/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dpqqxjk6f',
+    'API_KEY': '149611891333898',
+    'API_SECRET': 'EYvIgKuDJcAeoVsJxJbjbwayxaU'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -134,3 +146,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'insta-home'
+
+django_heroku.settings(locals())
