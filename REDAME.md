@@ -8,6 +8,7 @@ This web app allows user to upload and share photos just like the oroiginal inst
 * on the terminal type pythone manage.py runserver
 you will need python 3. and above to run the app
 ## Live link
+https://instacloneoke.herokuapp.com/
 
 ## Known Bugs
 The web app runs well though the photo upload does not work as expected.
